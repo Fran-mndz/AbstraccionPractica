@@ -38,8 +38,8 @@ public class pruebaDeAbstraccion {
         public abstract void viajar();
     }
     static class Futbolista extends MiembroSeleccion {
-        private int dorsal;
-        private String demarcacion;
+        private final int dorsal;
+        private final String demarcacion;
     
         public Futbolista(int id, String nombre, String apellidos, int edad, int dorsal, String demarcacion) {
             super(id, nombre, apellidos, edad);
@@ -66,7 +66,7 @@ public class pruebaDeAbstraccion {
     }
     //clase Entrenador
     static class Entrenador extends MiembroSeleccion {
-        private String idFederacion;
+        private final String idFederacion;
     
         public Entrenador(int id, String nombre, String apellidos, int edad, String idFederacion) {
             super(id, nombre, apellidos, edad);
@@ -91,8 +91,8 @@ public class pruebaDeAbstraccion {
     }
     // Clase Masajista
     static class Masajista extends MiembroSeleccion {
-        private String titulacion;
-        private int aniosExperiencia;
+        private final String titulacion;
+        private final int aniosExperiencia;
     
         public Masajista(int id, String nombre, String apellidos, int edad, String titulacion, int aniosExperiencia) {
             super(id, nombre, apellidos, edad);
