@@ -23,10 +23,10 @@ public class pruebaDeAbstraccion {
 
     // Clase abstracta MiembroSeleccion
     static abstract class MiembroSeleccion {
-        protected int id;
-        protected String nombre;
-        protected String apellidos;
-        protected int edad;
+        private final int id;
+        private String nombre;
+        private String apellidos;
+        private int edad;
     
         public MiembroSeleccion(int id, String nombre, String apellidos, int edad) {
             this.id = id;
@@ -34,6 +34,32 @@ public class pruebaDeAbstraccion {
             this.apellidos = apellidos;
             this.edad = edad;
         }
+
+        //getter
+        public int getId() {
+            return id;
+        }
+        public String getNombre() {
+            return nombre;
+        }
+        public String getApellidos() {
+            return apellidos;
+        }
+        public int getEdad() {
+            return edad;
+        }
+
+        //Setters
+        public void setNombre(){
+            this.nombre = nombre;
+        }
+        public void setApellidos(){
+            this.apellidos = apellidos;
+        }
+        public void setEdad(){
+            this.edad = edad;
+        }
+
         public abstract void concentrarse();
         public abstract void viajar();
     }
@@ -49,19 +75,19 @@ public class pruebaDeAbstraccion {
     
         @Override
         public void concentrarse() {
-            System.out.println("El futbolista " + nombre + " se concentra.");
+            System.out.println("El futbolista " + getNombre() + " se concentra.");
         }
     
         @Override
         public void viajar() {
-            System.out.println("El futbolista " + nombre + " viaja con el equipo.");
+            System.out.println("El futbolista " + getNombre() + " viaja con el equipo.");
         }
     
         public void jugarPartido() {
-            System.out.println("El futbolista " + nombre + " juega el partido como " + demarcacion + " con el dorsal " + dorsal + ".");
+            System.out.println("El futbolista " + getNombre() + " juega el partido como " + demarcacion + " con el dorsal " + dorsal + ".");
         }
         public void entrenar() {
-            System.out.println("El futbolista " + nombre + " entrena.");
+            System.out.println("El futbolista " + getNombre() + " entrena.");
         }
     }
     //clase Entrenador
@@ -75,18 +101,18 @@ public class pruebaDeAbstraccion {
     
         @Override
         public void concentrarse() {
-            System.out.println("El entrenador " + nombre + " se concentra.");
+            System.out.println("El entrenador " + getNombre() + " se concentra.");
         }
     
         @Override
         public void viajar() {
-            System.out.println("El entrenador " + nombre + " viaja con el equipo.");
+            System.out.println("El entrenador " + getNombre() + " viaja con el equipo.");
         }
         public void dirigirPartido() {
-            System.out.println("El entrenador " + nombre + " dirige el partido.");
+            System.out.println("El entrenador " + getNombre() + " dirige el partido.");
         }
         public void dirigirEntrenamiento() {
-            System.out.println("El entrenador " + nombre + " dirige el entrenamiento.");
+            System.out.println("El entrenador " + getNombre() + " dirige el entrenamiento.");
         }
     }
     // Clase Masajista
@@ -102,16 +128,16 @@ public class pruebaDeAbstraccion {
     
         @Override
         public void concentrarse() {
-            System.out.println("El masajista " + nombre + " se concentra.");
+            System.out.println("El masajista " + getNombre() + " se concentra.");
         }
     
         @Override
         public void viajar() {
-            System.out.println("El masajista " + nombre + " viaja con el equipo.");
+            System.out.println("El masajista " + getNombre() + " viaja con el equipo.");
         }
     
         public void darMasaje() {
-            System.out.println("El masajista " + nombre + " da un masaje a un jugador.");
+            System.out.println("El masajista " + getNombre() + " da un masaje a un jugador.");
         }
     }
 }
