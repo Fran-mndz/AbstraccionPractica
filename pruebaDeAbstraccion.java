@@ -22,7 +22,7 @@ public class pruebaDeAbstraccion {
     }
 
     // Clase abstracta MiembroSeleccion
-    public static abstract class MiembroSeleccion {
+    static abstract class MiembroSeleccion {
         protected int id;
         protected String nombre;
         protected String apellidos;
